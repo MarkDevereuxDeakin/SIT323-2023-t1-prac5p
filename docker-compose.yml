@@ -4,8 +4,9 @@ version: '1'
 # Start of definition of service
 services:
   # The name of the service
-  node-web-app:
-    image: markdevereux/node-web-app:latest
+  calculator-microservice-app:
+    container_name: calculator-microservice-app
+    image: markdevereux/calculator-microservice-app
     # The build context 
     build:
       context: .
