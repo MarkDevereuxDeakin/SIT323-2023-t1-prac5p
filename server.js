@@ -1,15 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const PORT = 8080;
+const HOST = '0.0.0.0';
 const app = express();
-const port = 8080;
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 //Serves the index.html file as a simple webpage
 app.get('/', (req, res) => {
-    res.sendFile(__dirname +'index.html');
+    res.sendFile(__dirname +'/index.html');
 });
 
 function addition(num1, num2){
@@ -185,6 +187,6 @@ app.get('/multiply/:num1/:num2', (req, res) => {
 })
 
 //Starts the Express Server listening on port 8080
-app.listen(port, () => {
-    console.log(`7.1P Kubernetes Task Listening On Port http://localhost:${port}`);    
+app.listen(PORT, () => {
+    console.log(`5.1P Docker Task Listening On Port http://${HOST}:${PORT}`);    
 });
