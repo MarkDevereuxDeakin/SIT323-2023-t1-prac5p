@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 //Serves the index.html file as a simple webpage
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.sendFile(__dirname +'index.html');
 });
 
 function addition(num1, num2){
